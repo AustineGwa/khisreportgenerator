@@ -14,13 +14,13 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="483.0" prefWidth="464.0" style="-fx-background-color: blue;">
                     <children>
                         <Label layoutX="135.0" layoutY="39.0" text="VITAMIN A  SUPPLEMENTATION" />
-                        <TextField fx:id="txtusername" layoutX="215.0" layoutY="169.0" />
+                        <TextField fx:id="txtcountyname" layoutX="215.0" layoutY="169.0" />
                         <Label layoutX="113.0" layoutY="173.0" text="County Name" />
                         <Label layoutX="113.0" layoutY="207.0" text="Facility Name" />
-                        <TextField fx:id="txtpassword" layoutX="215.0" layoutY="203.0" />
-                        <Button fx:id="btnlogin" layoutX="312.0" layoutY="297.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" text="Next" />
+                        <TextField fx:id="txtfcilityname" layoutX="215.0" layoutY="203.0" />
+                        <Button fx:id="btnNext" layoutX="312.0" layoutY="297.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" text="Next" />
                   <Label layoutX="113.0" layoutY="246.0" text="MFL Code" />
-                  <TextField layoutX="215.0" layoutY="242.0" prefHeight="25.0" prefWidth="149.0" />
+                  <TextField fx:id="txtmflcode" layoutX="215.0" layoutY="242.0" prefHeight="25.0" prefWidth="149.0" />
                   <Label layoutX="135.0" layoutY="64.0" text="MONTHLY MONITORING CHART" />
                   <Label layoutX="179.0" layoutY="81.0" text="(6 -11 months)" />
                     </children>
