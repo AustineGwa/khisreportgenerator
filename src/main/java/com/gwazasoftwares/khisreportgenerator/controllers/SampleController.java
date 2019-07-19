@@ -27,7 +27,7 @@ public class SampleController {
         Stage stage = new Stage();
         stage.setTitle("My New Stage Title");
         stage.setScene(new Scene(rootNode, 450, 450));
-        stage.setFullScreen(true);
+        stage.setMaximized(true);
         stage.show();
         // Hide this current window (if this is what you want)
         hideCurrentScreen();
@@ -40,7 +40,7 @@ public class SampleController {
 
         // get a handle to the stage
         Stage stage = (Stage) btnNext.getScene().getWindow();
-        // do what you have to do
+        // got your current stage ---kill it
         stage.close();
     }
 }
