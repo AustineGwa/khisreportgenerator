@@ -41,8 +41,9 @@ public class Main extends Application {
         rootNode = fxmlLoader.load();
 
         primaryStage.setTitle("Hello World");
-        Scene scene = new Scene(rootNode, 800, 600);
+        Scene scene = new Scene(rootNode, 700, 500);
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
