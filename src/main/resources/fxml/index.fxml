@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="732.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gwazasoftwares.khisreportgenerator.controllers.IndexController">
+    <children>
+          <AnchorPane layoutX="141.0" layoutY="49.0" minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="464.0" style="-fx-background-color: #fff;">
+              <children>
+                  <Label layoutX="70.0" layoutY="33.0" text="VITAMIN A  SUPPLEMENTATION" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+                  <TextField fx:id="txtcountyname" layoutX="215.0" layoutY="169.0" />
+                  <Label layoutX="113.0" layoutY="173.0" text="County Name" />
+                  <Label layoutX="113.0" layoutY="207.0" text="Facility Name" />
+                  <TextField fx:id="txtfcilityname" layoutX="215.0" layoutY="203.0" />
+                  <Button fx:id="btnNext" layoutX="215.0" layoutY="292.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: blue; -fx-background-radius: 10;" text="Next" textFill="#fcf7f7" />
+            <Label layoutX="113.0" layoutY="246.0" text="MFL Code" />
+            <TextField fx:id="txtmflcode" layoutX="215.0" layoutY="242.0" prefHeight="25.0" prefWidth="149.0" />
+            <Label layoutX="70.0" layoutY="57.0" style="-fx-font-weight: bold;" text="MONTHLY MONITORING CHART" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+            <Label layoutX="121.0" layoutY="81.0" style="-fx-font-weight: bold;" text="(6 -11 months)" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+              </children>
+          </AnchorPane>
+      <Label layoutX="264.0" layoutY="417.0" text="Division Of Family Health ,Nutrition &amp; Dietetics Unit" textFill="#1e1d1d">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+    </children>
+</AnchorPane>
