@@ -1,14 +1,13 @@
 package com.gwazasoftwares.khisreportgenerator.controllers;
 
 import com.gwazasoftwares.khisreportgenerator.models.Record;
+import com.gwazasoftwares.khisreportgenerator.models.TableDataSet;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.springframework.stereotype.Component;
 
@@ -53,7 +52,12 @@ public class IndexController {
 
         Stage stage = new Stage();
         stage.setTitle("Reports Generator");
-        stage.setScene(new Scene(rootNode));
+        Scene scene = new Scene(rootNode);
+
+//            TableView<TableDataSet> dataEntryTable = (TableView<TableDataSet>) scene.lookup("#dataEntryTable");
+//            TableColumn<TableDataSet, String> monthColumn =  dataEntryTable.getColumns().forEach();
+
+        stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
         hideCurrentScreen();

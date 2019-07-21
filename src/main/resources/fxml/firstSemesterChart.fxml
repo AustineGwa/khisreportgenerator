@@ -20,8 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gwazasoftwares.khisreportgenerator.controllers.FirstSemesterController">
    <center>
       <VBox prefHeight="553.0" prefWidth="877.0" style="-fx-background-color: cyan;">
         <children>
@@ -40,10 +39,10 @@
                                     <Label layoutX="44.0" layoutY="126.0" text="Under 1 YearPopulation" />
                                     <Label layoutX="46.0" layoutY="173.0" text="6-11 months population" />
                                     <Label layoutX="49.0" layoutY="220.0" text="monthly Target (6 - 11)" />
-                                    <TextField layoutX="197.0" layoutY="80.0" />
-                                    <TextField layoutX="197.0" layoutY="122.0" />
-                                    <TextField layoutX="200.0" layoutY="169.0" />
-                                    <TextField layoutX="200.0" layoutY="216.0" />
+                                    <TextField fx:id="totalPopulation" layoutX="197.0" layoutY="80.0" />
+                                    <TextField fx:id="u1YearPopulation" layoutX="197.0" layoutY="122.0" />
+                                    <TextField fx:id="sixtoelevenmonthspopulation" layoutX="200.0" layoutY="169.0" />
+                                    <TextField fx:id="sixToElevenMT" layoutX="200.0" layoutY="216.0" />
                                     <Label layoutX="103.0" layoutY="21.0" text="First  Semester   (JAN - JUN)" textAlignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="14.0" />
@@ -51,7 +50,7 @@
                                     </Label>
                                  </children>
                               </AnchorPane>
-                              <LineChart>
+                              <LineChart fx:id="MonthToCTGraph">
                                 <xAxis>
                                   <CategoryAxis side="BOTTOM" />
                                 </xAxis>
@@ -66,10 +65,10 @@
                         </HBox>
                         <HBox>
                            <children>
-                              <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="703.0">
+                              <TableView fx:id="dataEntryTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="703.0">
                                 <columns>
-                                  <TableColumn prefWidth="104.0" text="MONTH" />
-                                  <TableColumn prefWidth="99.0" text="JAN" />
+                                  <TableColumn fx:id="monthColumn" prefWidth="104.0" text="MONTH" />
+                                  <TableColumn fx:id="jan" prefWidth="99.0" text="JAN" />
                                     <TableColumn prefWidth="99.0" text="FEB" />
                                     <TableColumn prefWidth="99.0" text="MARCH" />
                                     <TableColumn prefWidth="97.0" text="APRIL" />
@@ -82,8 +81,8 @@
                               </TableView>
                               <Pane prefHeight="242.0" prefWidth="261.0">
                                  <children>
-                                    <Button layoutX="105.0" layoutY="96.0" mnemonicParsing="false" style="-fx-background-color: blue; -fx-text-fill: #fff; -fx-background-radius: 10;" text="Download Chart" />
-                                    <Button layoutX="105.0" layoutY="54.0" mnemonicParsing="false" style="-fx-background-color: blue; -fx-text-fill: #fff; -fx-background-radius: 10;" text="Generate  Chart" />
+                                    <Button fx:id="btnDownloadChart" layoutX="105.0" layoutY="96.0" mnemonicParsing="false" style="-fx-background-color: blue; -fx-text-fill: #fff; -fx-background-radius: 10;" text="Download Chart" />
+                                    <Button fx:id="btnGenerateChart" layoutX="105.0" layoutY="54.0" mnemonicParsing="false" style="-fx-background-color: blue; -fx-text-fill: #fff; -fx-background-radius: 10;" text="Generate  Chart" />
                                  </children>
                               </Pane>
                            </children>
