@@ -1,10 +1,12 @@
 package com.gwazasoftwares.khisreportgenerator;
 
+import com.gwazasoftwares.khisreportgenerator.functions.Functions;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -12,6 +14,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class Main extends Application {
+
 
     private ConfigurableApplicationContext springContext;
     private Parent rootNode;
@@ -35,14 +38,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        fxmlLoader.setLocation(getClass().getResource("/fxml/index.fxml"));
-        rootNode = fxmlLoader.load();
 
-        primaryStage.setTitle("khis-Repoter");
-        Scene scene = new Scene(rootNode, 700, 500);
-        primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
-        primaryStage.show();
+        Functions functions = new Functions();
+        functions.openMainScreen();
+
+
     }
 
     @Override

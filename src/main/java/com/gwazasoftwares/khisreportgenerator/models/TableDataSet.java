@@ -1,23 +1,17 @@
 package com.gwazasoftwares.khisreportgenerator.models;
 
+import javafx.beans.property.StringProperty;
+
 public class TableDataSet {
 
     private String month;
-    private int jan;
-
-    public TableDataSet(String month, int jan) {
-        this.month = month;
-        this.jan = jan;
-    }
+    private String jan;
 
     public TableDataSet() {
     }
 
-    public int getJan() {
-        return jan;
-    }
-
-    public void setJan(int jan) {
+    public TableDataSet(String month, String jan) {
+        this.month = month;
         this.jan = jan;
     }
 
@@ -27,5 +21,13 @@ public class TableDataSet {
 
     public void setMonth(String month) {
         this.month = month;
+    }
+
+    public String getJan() {
+        return jan;
+    }
+
+    public void setJan(String jan) {
+        this.jan = jan;
     }
 }

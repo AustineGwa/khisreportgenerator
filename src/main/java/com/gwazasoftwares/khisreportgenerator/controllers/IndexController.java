@@ -1,5 +1,6 @@
 package com.gwazasoftwares.khisreportgenerator.controllers;
 
+import com.gwazasoftwares.khisreportgenerator.functions.Functions;
 import com.gwazasoftwares.khisreportgenerator.models.Record;
 import com.gwazasoftwares.khisreportgenerator.models.TableDataSet;
 import javafx.fxml.FXML;
@@ -46,29 +47,14 @@ public class IndexController {
             Record record = new Record(county, facility, mflCode);
             System.out.println(record.toString());
 
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("/fxml/firstSemesterChart.fxml"));
-        Parent rootNode = fxmlLoader.load();
-
-        Stage stage = new Stage();
-        stage.setTitle("Reports Generator");
-        Scene scene = new Scene(rootNode);
-
-//            TableView<TableDataSet> dataEntryTable = (TableView<TableDataSet>) scene.lookup("#dataEntryTable");
-//            TableColumn<TableDataSet, String> monthColumn =  dataEntryTable.getColumns().forEach();
-
-        stage.setScene(scene);
-        stage.setMaximized(true);
-        stage.show();
+        Functions functions = new Functions();
+        functions.openFirstSemesterScreen();
         hideCurrentScreen();
     }
     }
 
     private void hideCurrentScreen() {
-
-        // get a handle to the stage
-        Stage stage = (Stage) btnNext.getScene().getWindow();
-        // got your current stage ---kill it
-        stage.close();
+        Functions functions = new Functions();
+        functions.closeWindow(btnNext);
     }
 }
